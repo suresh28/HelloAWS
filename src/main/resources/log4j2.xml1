@@ -1,0 +1,27 @@
+<configuration>
+<Appenders>
+
+<RollingFile name="FileAppender" fileName="c:\\opt\\logs\\log4j2-demo.log" 
+             filePattern="c:\\opt\\logs\\log4j2-demo-%d{yyyy-MM-dd}-%i.log">
+    <PatternLayout>
+        <Pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%t] %c{1} - %msg%n</Pattern>
+    </PatternLayout>
+    <Policies>
+        <SizeBasedTriggeringPolicy size="10MB" />
+    </Policies>
+    <DefaultRolloverStrategy max="10"/>
+</RollingFile>
+
+</Appenders>
+
+<Loggers>
+<Logger name="com.aws.*" level="info" additivity="false">
+	<AppenderRef ref="FileAppender" ></AppenderRef>
+</Logger>
+
+<Root level="info">
+	<AppenderRef ref="FileAppender" ></AppenderRef>
+</Root>
+</Loggers>
+
+</configuration>
