@@ -107,11 +107,7 @@ public class FileCreater {
         
 	        
 		
-		
-		
-		LOG.info(" Download Controller - process completed :: "  + fileName);
-
-		// return K2View.DOWNLOAD_SUCCESS;
+		LOG.info(" Create Controller - process completed :: "  + fileName);
 
 	}
 	
