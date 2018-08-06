@@ -97,16 +97,12 @@ public class FileCreater {
     		{
     			throw new DownloadException("Requested Bucket does not exist in S3");
     		}
-    		
            
             
         } catch (AmazonServiceException e) {
             System.err.println("AWS Service exception occured ::" + e.getErrorMessage());
-            //System.exit(1);
-        } 
-        
-	        
-		
+         } 
+ 		
 		LOG.info(" Create Controller - process completed :: "  + fileName);
 
 	}
